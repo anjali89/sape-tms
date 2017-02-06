@@ -6,4 +6,6 @@ import com.sapient.tms.bean.Employee;
 
 public interface EmployeeDao {
 	public Employee search(int id) throws SQLException, ClassNotFoundException;
+
+	public boolean insert(Employee employee) throws ClassNotFoundException, SQLException;
 }

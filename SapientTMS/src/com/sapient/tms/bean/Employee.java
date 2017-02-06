@@ -6,9 +6,11 @@ public class Employee {
 	private int id;
 	private String name;
 	private String address;
+	private String contactNumber;
 	private String designation;
 	private int basicSalary;
 	private Organization organization;
+	private boolean isAdmin;
   
 	/**
 	 * @param id : Employee id
@@ -19,15 +21,17 @@ public class Employee {
 	 * @param organization : Employee organization (SapientNitro 
 	 * 							or SapientGM)
 	 */
-	public Employee(int id, String name, String address, 
+	public Employee(int id, String name, String address, String contactNumber,  
 			String designation, int basicSalary,
-			Organization organization) {
+			Organization organization, boolean isAdmin) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.designation = designation;
 		this.basicSalary = basicSalary;
 		this.organization = organization;
+		this.isAdmin = isAdmin;
+		this.contactNumber = contactNumber;
 	}
   
 	public String getName() {
@@ -95,7 +99,18 @@ public class Employee {
 			return false;
 		return true;
 	}
-	
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public String getContactNumber() {
+		return contactNumber;
+	}
+
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
 	
 	
 	
